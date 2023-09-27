@@ -1,5 +1,8 @@
 const express = require('express')
 //const bodyParser = require('body-parser');
+const myfunc = require('../middelware/middel')
+
+const morgan = require('morgan')  // custom middelware
 
 const app = express() 
 
@@ -11,6 +14,8 @@ app.use(express.json())
 app.use(bodyParser.json());
 
 */
+app.use(myfunc)
+app.use(morgan('tiny'))
 
 const port = 3000
 const courses = [{
