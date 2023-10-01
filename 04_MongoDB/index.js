@@ -12,8 +12,6 @@ const CourseSchema = new mongoose.Schema({
     creater:String,
     publishedDate:{type:Date,default:Date.now},  // {type:String,required:true}
     ispublished : Boolean,
-
-
 })
 
 
